@@ -12,7 +12,7 @@ BASE_URL = "https://api.open.fec.gov/v1/schedules/schedule_a/"
 
 @app.get("/contributions")
 def get_contributions(
-    contributor_name: str = Query(..., description="Contributor name, e.g. 'Laura Villagran-Johnson'"),
+    contributor_name: str = Query(..., description="Contributor name"),
     limit: int = 20
 ):
     params = {

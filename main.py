@@ -4,7 +4,8 @@ import requests, os
 app = FastAPI(
     title="FEC Donor Lookup",
     description="Query the Federal Election Commission (FEC) API for contributions.",
-    version="1.0.0"
+    version="1.0.0",
+    servers=[{"url": "https://fec-donor-api.onrender.com"}]
 )
 
 FEC_API_KEY = os.getenv("FEC_API_KEY")
